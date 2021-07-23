@@ -26,11 +26,9 @@ jobs:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Ansible create entries
-        uses: actions/ansible-cli-action@latest
-        with:
-          command: "ansible-playbook entries.yml"
-      
+      - name: Run Ansible Playbook
+        run: ansible-playbook entries.yml
+
       - name: Install JS Packages
         run: yarn
         
