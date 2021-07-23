@@ -1,0 +1,90 @@
+@use 'variables';
+
+* {
+  box-sizing: border-box;
+}
+
+body  {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  color: pink;
+  cursor: pointer;
+}
+
+li { list-style: none; }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.woodlands {
+  @extend %font !optional;
+  main {
+    @extend %slate !optional;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    height: 100vh;
+  }
+  header {
+    display: none;
+    @media (min-width: 768px) {
+      display: flex;
+      padding-bottom: 0.9375rem;
+      padding-top: 0.9375rem;
+      border-bottom: 2px solid;
+    }
+  }
+  p { font-size: 1.125rem; }
+  h3 { font-size: 2rem; }
+  a, b, body, canvas, caption, dd, dl, dt, figure, form, h1, h2, h3, h4, header, html, i, img, li, menu, nav, object, p, pre, s, span, summary, time, ul, var {
+    margin: 0;
+    padding: 0;
+  }
+
+  .title {
+    padding-top: 8.125rem;
+    padding-bottom: 1.5625rem;
+    line-height: 1.12;
+    font-size: 3.3125rem;
+    border-bottom: 2px solid;
+  }
+  .item, li {
+    align-items: center;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid;
+    display: flex;
+  }
+  // h3 {
+  //   color: red;
+  // }
+  // p:nth-child(2) {
+  //   color: orange;
+  // }
+  // p:nth-child(3) {
+  //   color: yellow;
+  // }
+}
+
+.w50, h3 { width: 100%; font-size: 2rem};
+.w35, p:nth-child(2) { display: none};
+.w15, p:nth-child(3) { display: none};
+
+.hide {
+  display: none
+}
+
+.table-top {
+  h4 { width: 35%;  }
+}
+
+@media (min-width:768px) {
+  .w50, h3 { width: 35% };
+  .w35, p:nth-child(2) { width: 50%; display: block };
+  .w15, p:nth-child(3) { width: 15%; display: block};
+}
+
