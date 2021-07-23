@@ -4,7 +4,7 @@
   connection: local 
   tasks:
     - name: register entries
-      shell: "jot - 1 `ls {{ playbook_dir }}/_imports/posts | wc -l | tr -d '\n'`" 
+      shell: "seq 1 `ls {{ playbook_dir }}/_imports/posts | wc -l | tr -d '\n'`" 
       register: sequence
     - name: create entries
       template:
