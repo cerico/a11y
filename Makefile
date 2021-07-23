@@ -1,3 +1,7 @@
+entries:
+	ansible-playbook entries.yml
+post:
+	ansible-playbook post.yml
 publish:
 	npm run build
 	ansible-playbook deploy/publish.yml
