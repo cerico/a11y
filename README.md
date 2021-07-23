@@ -1,19 +1,18 @@
-# Ansible generated sergey site
+# Accessibility Log
 
-## Run
+## Run locally
 
 ```
+npm i
+make entries
 npm run dev
+open https://localhost:8200
 ```
 
-## Build for production
+## Add a new post
 
 ```
-npm run build
+make post
 ```
 
-### Deploy to Netlify
-
-```
-npm run netlify
-```
+This creates a new markdown file in `_imports/posts`. Edit this 
